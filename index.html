@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krrish Sharma — Software Engineer</title>
+<meta name="description" content="Krrish Sharma — Software Engineer & Computer Science student at York University. Building at BMO, Spot, and Kine.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Krrish Sharma — Software Engineer">
+<meta property="og:description" content="Software Engineer & CS student at York University. Building at BMO, Spot, and Kine.">
+<meta property="og:image" content="og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Krrish Sharma — Software Engineer">
+<meta name="twitter:description" content="Software Engineer & CS student at York University.">
+<meta name="twitter:image" content="og-image.png">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="puzzle-bg" aria-hidden="true"></div>
+<canvas id="ambientSnake" class="ambient-snake" aria-hidden="true"></canvas>
+<div class="grain"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav class="topbar" id="topbar">
+  <div class="topbar-inner">
+    <a href="#top" class="brand">KS</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="menu-overlay" id="menuOverlay">
+  <button class="menu-close" id="menuClose" aria-label="Close menu">✕</button>
+  <nav class="menu-links">
+    <a href="#experience" data-nav="experience">Experience</a>
+    <a href="#about" data-nav="about">About</a>
+    <a href="#work" data-nav="work">Work</a>
+    <a href="#contact" data-nav="contact">Contact</a>
+  </nav>
+  <div class="menu-footer">
+    <a href="mailto:krrishs1612@gmail.com">krrishs1612@gmail.com</a>
+    <a href="https://www.linkedin.com/in/krrish-sharma1612" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+  </div>
+</div>
+
+<header id="top" class="hero">
+  <div class="highscore-badge" id="highscoreBadge">
+    <span class="ambient-hud-label">High Score</span>
+    <span class="ambient-hud-val" id="highscoreVal">—</span>
+  </div>
+
+  <div class="ambient-hud" id="ambientHud">
+    <span class="ambient-hud-label">Score</span>
+    <span class="ambient-hud-val" id="ambientHudVal">0</span>
+  </div>
+
+  <div class="hero-body">
+    <div class="hero-left reveal">
+      <div class="name-row">
+        <h1 class="hero-name">Krrish<br>Sharma</h1>
+        <span class="badge">&apos;28</span>
+      </div>
+      <p class="hero-role">Software Engineer — Toronto, ON</p>
+
+      <nav class="pill-nav">
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <p class="game-hint">psst — try the arrow keys <span>↑ ↓ ← →</span></p>
+    </div>
+
+    <div class="hero-portrait reveal">
+      <div class="portrait-frame" id="portraitFrame">
+        <img src="portrait.jpg" alt="Krrish Sharma" width="675" height="900">
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue">
+    <span class="scroll-line"></span>
+    <span class="scroll-arrow">↓</span>
+  </div>
+</header>
+
+<section class="marquee-wrap" aria-hidden="true">
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Java</span><span>TypeScript</span><span>React</span><span>React Native</span>
+      <span>Node.js</span><span>PostgreSQL</span><span>Supabase</span><span>Redis</span>
+      <span>Next.js</span><span>SQL</span><span>Docker</span><span>REST APIs</span>
+      <span>Java</span><span>TypeScript</span><span>React</span><span>React Native</span>
+      <span>Node.js</span><span>PostgreSQL</span><span>Supabase</span><span>Redis</span>
+      <span>Next.js</span><span>SQL</span><span>Docker</span><span>REST APIs</span>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <section id="experience" class="section">
+    <div class="section-head reveal">
+      <span class="eyebrow">Career</span>
+      <h2>Where I've worked</h2>
+    </div>
+
+    <div class="exp-list">
+
+      <div class="exp-row reveal">
+        <div class="exp-date">2026 — Now</div>
+        <div class="exp-main">
+          <div class="exp-heading">
+            <h3>Bank of Montreal (BMO)</h3>
+            <span class="exp-role">Software Developer Intern</span>
+          </div>
+          <p class="exp-desc">Working with Java and SQL to automate financial data processing on Loan IQ, BMO's core banking system, and building REST APIs to automate daily data flows between core banking platforms.</p>
+        </div>
+      </div>
+
+      <div class="exp-row reveal">
+        <div class="exp-date">2026 — Now</div>
+        <div class="exp-main">
+          <div class="exp-heading">
+            <h3>Spot</h3>
+            <span class="exp-role">Co-Founder &amp; Founding Engineer</span>
+          </div>
+          <p class="exp-desc">Co-founded a local discovery app for the GTA — defined the brand and visual system alongside a design co-founder, then built the platform in React Native, TypeScript, and Supabase with Google Maps at its core.</p>
+        </div>
+      </div>
+
+      <div class="exp-row reveal">
+        <div class="exp-date">2026 — Now</div>
+        <div class="exp-main">
+          <div class="exp-heading">
+            <h3>Kine</h3>
+            <span class="exp-role">Founder &amp; Developer</span>
+          </div>
+          <p class="exp-desc">Building Kine, a mobile app that works like Shazam for the gym — point your camera at any exercise or machine and it instantly tells you what it is, which muscles it targets, proper form, and common mistakes to avoid. Building it in React Native and Expo, going from zero mobile development experience to a working prototype running on my own phone.</p>
+        </div>
+      </div>
+
+      <div class="exp-row reveal">
+        <div class="exp-date">2023 — 2024</div>
+        <div class="exp-main">
+          <div class="exp-heading">
+            <h3>City of Toronto</h3>
+            <span class="exp-role">Stage &amp; Events Coordinator</span>
+          </div>
+          <p class="exp-desc">Ran logistics for large-scale public events — stage setup, ticketing, crowd management — and worked across city departments to hit tight deadlines under real public pressure.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="section-head reveal">
+      <span class="eyebrow">About</span>
+      <h2>A bit more about me</h2>
+    </div>
+
+    <div class="about-content">
+      <div class="about-text reveal">
+        <p>
+          I'm a Computer Science (Honours) student at the Lassonde School of Engineering,
+          York University, graduating in 2028. I like building things end to end — backend
+          services, real-time systems, and the products they live inside of.
+        </p>
+        <p>
+          This summer I'm a Software Developer Intern at BMO, working on Loan IQ and
+          automating financial data flows. Outside of that I'm building two of my own
+          products, <strong>Kine</strong> and <strong>Spot</strong>, and shipping side
+          projects that explore search, real-time data, and applied AI.
+        </p>
+        <p>
+          Before software, I coordinated large public events for the City of Toronto —
+          which is probably why I care as much about shipping on a deadline as I do about
+          clean code.
+        </p>
+      </div>
+
+      <div class="stats-row reveal">
+        <div class="stat">
+          <span class="stat-num" data-count="3.7" data-decimals="2">0</span>
+          <span class="stat-label">GPA</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="4">0</span>
+          <span class="stat-label">Projects Shipped</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="2">0</span>
+          <span class="stat-label">Startups Co-Founded</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="6" data-suffix="+">0</span>
+          <span class="stat-label">Years Coding</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="section section-tight">
+    <div class="section-head reveal">
+      <span class="eyebrow">Selected Work</span>
+      <h2>Projects I've shipped</h2>
+    </div>
+
+    <div class="work-list">
+
+      <article class="work-item reveal">
+        <div class="work-art grad-1">
+          <span class="work-art-label">Cooksy</span>
+        </div>
+        <div class="work-info">
+          <div class="work-top">
+            <h3>Cooksy — AI Recipe Generator</h3>
+            <span class="work-date">2025</span>
+          </div>
+          <p>An AI tool that turns whatever's in your fridge into a full recipe — responsive frontend paired with generation logic on the backend.</p>
+          <div class="work-bottom">
+            <div class="work-stack"><span>React</span><span>Tailwind CSS</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-item reveal">
+        <div class="work-art grad-2">
+          <span class="work-art-label">Shortln</span>
+        </div>
+        <div class="work-info">
+          <div class="work-top">
+            <h3>Distributed URL Shortener</h3>
+            <span class="work-date">2025</span>
+          </div>
+          <p>A scalable link-shortening service built for throughput — Redis caching in front of Postgres, with REST APIs handling generation and redirection.</p>
+          <div class="work-bottom">
+            <div class="work-stack"><span>Java</span><span>Redis</span><span>PostgreSQL</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-item reveal">
+        <div class="work-art grad-3">
+          <span class="work-art-label">Crowd</span>
+        </div>
+        <div class="work-info">
+          <div class="work-top">
+            <h3>Real-Time Crowd Intelligence</h3>
+            <span class="work-date">2025</span>
+          </div>
+          <p>Live crowd density across locations, rendered on a real-time map. WebSockets push updates straight to the client as conditions change.</p>
+          <div class="work-bottom">
+            <div class="work-stack"><span>React</span><span>Node.js</span><span>WebSockets</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="work-item reveal">
+        <div class="work-art grad-4">
+          <span class="work-art-label">Search</span>
+        </div>
+        <div class="work-info">
+          <div class="work-top">
+            <h3>AI Personal Knowledge Search</h3>
+            <span class="work-date">2024–25</span>
+          </div>
+          <p>A semantic search engine over personal notes and documents — vector embeddings power natural-language queries instead of keyword matching.</p>
+          <div class="work-bottom">
+            <div class="work-stack"><span>Node.js</span><span>TypeScript</span><span>PostgreSQL</span></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<section id="contact" class="contact-cta">
+  <div class="contact-inner reveal">
+    <span class="eyebrow">Contact</span>
+    <h2>Let's build something<br>worth shipping.</h2>
+    <p class="contact-lede">Open to internships, collaborations, and conversations about
+      interesting problems.</p>
+    <a href="mailto:krrishs1612@gmail.com" class="contact-email magnetic">krrishs1612@gmail.com</a>
+    <div class="contact-social">
+      <a href="https://www.linkedin.com/in/krrish-sharma1612" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>© <span id="year"></span> Krrish Sharma</span>
+  <button id="toTop" class="to-top">Back to top ↑</button>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
