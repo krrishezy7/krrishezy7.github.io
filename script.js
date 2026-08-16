@@ -525,6 +525,10 @@ function initAmbientSnake() {
     engageManual(dirs[mapped]);
   });
 
+  if (gameHint) {
+    gameHint.addEventListener('click', () => engageManual(dirs.right));
+  }
+
   const heroObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => { heroVisible = entry.isIntersecting; });
   }, { threshold: 0.15 });

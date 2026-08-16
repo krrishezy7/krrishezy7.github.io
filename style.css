@@ -285,13 +285,35 @@ body.no-cursor .cursor-ring { display: none; }
 }
 
 .game-hint {
-  margin-top: 22px;
-  font-size: 0.8rem;
-  color: var(--ink-faint);
+  margin-top: 26px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #eaf1ff;
+  background: #2563eb;
+  border: 1px solid #2563eb;
+  border-radius: 100px;
+  padding: 12px 22px;
+  cursor: pointer;
+  animation: gameHintPulse 2.6s ease-in-out infinite;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s ease, opacity 0.4s ease;
+}
+.game-hint:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(37,99,235,0.35);
 }
 .game-hint span {
   font-family: ui-monospace, monospace;
   letter-spacing: 0.05em;
+  color: #c3d7ff;
+  font-weight: 500;
+}
+@keyframes gameHintPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37,99,235,0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(37,99,235,0); }
 }
 
 .highscore-badge,
