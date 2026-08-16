@@ -181,7 +181,7 @@ function initAmbientSnake() {
   // fewer ambient snakes on phones — same breakpoint the CSS switches to
   // single-column layout at, so it lines up with what actually counts as "mobile"
   function getAmbientCount() {
-    return window.innerWidth <= 860 ? 5 : 20;
+    return window.innerWidth <= 860 ? 5 : 10;
   }
   const AMBIENT_COLORS = [
     '37,99,235', '59,130,246', '29,78,216', '14,165,233', '30,64,175',
