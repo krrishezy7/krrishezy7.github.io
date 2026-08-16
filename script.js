@@ -178,7 +178,11 @@ function initAmbientSnake() {
 
   const ctx = canvas.getContext('2d');
   const CELL = 46;
-  const AMBIENT_COUNT = 20;
+  // fewer ambient snakes on phones — same breakpoint the CSS switches to
+  // single-column layout at, so it lines up with what actually counts as "mobile"
+  function getAmbientCount() {
+    return window.innerWidth <= 860 ? 5 : 20;
+  }
   const AMBIENT_COLORS = [
     '37,99,235', '59,130,246', '29,78,216', '14,165,233', '30,64,175',
     '96,165,250', '37,99,235', '29,78,216', '14,165,233', '59,130,246'
@@ -259,7 +263,7 @@ function initAmbientSnake() {
 
   function spawnAmbientSwarm(keepSnake) {
     snakes = keepSnake ? [keepSnake] : [];
-    while (snakes.length < AMBIENT_COUNT) {
+    while (snakes.length < getAmbientCount()) {
       const spot = randomEmptySpot(snakes.map(s => s.body));
       snakes.push(makeSnakeAt(spot.x, spot.y));
     }
